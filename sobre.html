@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>NUTES</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <!-- <link href="assets/img/favicon.png" rel="icon"> -->
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-menu">
+    <nav class="navbar ">
+      <div class="menu-itens">
+        <a href="index.html" class="logo"><img src="assets/img/LOGO.svg" alt="" class="img-fluid"></a>
+        <ul class="menu">
+          <li><a class="nav-link " href="index.html">HOME</a></li>
+          <li><a class="nav-link active" href="sobre.html">SOBRE</a></li>
+          <li><a class="nav-link" href="/instalacoes/instalacoes.html">INSTALAÇÕES</a></li>
+          <li><a class="nav-link" href="/laboratorios/laboratorios.html">LABORATÓRIOS</a></li>
+          <li><a class="nav-link" href="servicos.html">SERVIÇOS</a></li>
+          <li><a class="nav-link" href="embrapii.html">EMBRAPII</a></li>
+          <li><a class="nav-link" href="noticias.html">NOTÍCIAS</a></li>
+          <li><a class="nav-link" href="contato.html">CONTATO</a></li>
+        </ul>
+      </div>
+      </div>
+
+      <div class="social-icons">
+        <div id="navbar-search-autocomplete" style="display: none;" data-mdb-input-init>
+          <input type="search" id="form1" class="form-control-search me-2" oninput="search()" autocomplete="off" />
+          <ul id="searchResults" class="dropdown-menu mt-2" aria-labelledby="form1">
+          </ul>
+        </div>
+        <img class="lupa" id="img-lupa" onclick="toggleSearch()" src="assets/img/social/lupa.png"
+          style="cursor: pointer;" />
+
+        <div class="dropdown" style="display: inline-block;">
+          <img class="brasil" src="assets/img/social/brazil.svg" onclick="toggleDropdown()" style="cursor: pointer;" />
+          <div id="languageDropdown" class="dropdown-content" style="display: none;">
+            <div class="row justify-content-center">
+              <div class="col-sm-3">
+                <a href="#" onclick="setLanguage('pt')">
+                  <img src="assets/img/social/brazil.svg" />
+                </a>
+              </div>
+              <div class="col-sm-3">
+                <a href="#" onclick="setLanguage('es')">
+                  <img src="assets/img/social/spain.svg" />
+                </a>
+              </div>
+              <div class="col-sm-3">
+                <a href="#" onclick="setLanguage('en')">
+                  <img src="assets/img/social/usa.svg" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <img class="line" src="assets/img/social/line.svg" style="cursor: pointer;" />
+        <img class="instagram" src="assets/img/social/instagram.svg" style="cursor: pointer;" />
+        <img class="facebook" src="assets/img/social/facebook.svg" style="cursor: pointer;" />
+        <img class="linkedin" src="assets/img/social/linkedin.svg" style="cursor: pointer;" />
+        <img class="twitter" src="assets/img/social/twitter.svg" style="cursor: pointer;" />
+      </div>
+    </nav>
+  </header>
+  <!-- End Header -->
+
+  <main id="main">
+    <div id="side-menu">
+      <ul>
+        <li><a href="#sobre">Quem Somos</a></li>
+        <li><a href="#missao-visao-valores">Missão, Visão e Valores</a></li>
+        <li><a href="#certificacoes2">Certificações</a></li>
+        <li><a href="#politicas-da-qualidade">Política da Qualidade</a></li>
+        <li><a href="#areas-de-atuacao">Linhas de Atuação</a></li>
+        <li><a href="#laboratorios">Laboratórios</a></li>
+        <li><a href="#fomento">Apoio / Fomento </a></li>
+        <li><a href="#nossa-equipe">Nossa Equipe</a></li>
+      </ul>
+    </div>
+
+    <section id="sobre" class="section">
+
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-8">
+          <h3 class="mt-2 mb-4" id="fixQuemSomos">
+            <strong class="span2S">Quem Somos</strong>
+          </h3>
+          <p class="span3S">
+            Localizado em Campina Grande-PB, o Núcleo de Tecnologias Estratégicas em Saúde (NUTES) da Universidade
+            Estadual da Paraíba (UEPB) é uma Instituição de Ciência e Tecnologia
+            (ICT), com especialização na área da saúde. Entre seus objetivos, destaca-se o de atender à demanda de
+            mercado e o de atuar como facilitador de inovação para governos, empresas e outros centros de
+            desenvolvimento.
+          </p>
+        </div>
+
+        <img src="assets/img/banners/nutes.png" alt="Imagem de Fundo" class="background-image img-banner-sobre">
+      </div>
+
+    </section>
+    <section id="missao-visao-valores" class="section">
+      <div>
+        <div class="row section-miss">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-8">
+            <div class="row">
+              <div class="col-sm-2 mt-4"><img src="assets/img/banners/missao-logo.png" alt="Imagem de Fundo"></div>
+              <div class="col-sm-9">
+                <p class="span4S">
+                  Atuar no Setor da Saúde, com excelência e inovação, tornando soluções de ponta acessíveis, gerando
+                  negócios
+                  com organizações públicas e privadas, atendendo às agências reguladoras e sendo reconhecida por
+                  fornecer
+                  produtos e serviços com segurança e qualidade.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row section-miss">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-8">
+            <div class="row">
+              <div class="col-sm-2 ms-2 visao-logo"><img src="assets/img/banners/visao-logo.png" alt="Imagem de Fundo">
+              </div>
+              <div class="col-sm-9">
+                <p class="span4S">
+                  Ser reconhecido globalmente pelo desenvolvimento, inovação e atuação na produção
+                  e distribuição de dispositivos e soluções médicas confiáveis e de qualidade.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row section-miss">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-8">
+            <div class="row">
+              <div class="col-sm-2 align-self-center"><img src="assets/img/banners/valores-logo.png"
+                  alt="Imagem de Fundo"></div>
+              <div class="col-sm-9">
+                <p class="span4S">
+                  • Função social;<br>
+                  • Foco na satisfação do cliente;<br>
+                  • Respeito ao ser humano e ao meio ambiente;<br>
+                  • Profissionalismo de seus colaboradores;<br>
+                  • Integridade e fidelidade;<br>
+                  • Ética e transparência;<br>
+                  • Atitude positiva;<br>
+                  • Soluções de ponta acessíveis;<br>
+                  • Alta performance;<br>
+                  • Orientação ao resultado.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <section id="certificacoes2" class="section">
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-8">
+          <h3 class="mt-2 mb-4">
+            <strong class="span2S">Certificações</strong>
+          </h3>
+          <p class="span3S">
+            Comprovando que atende a rigorosos critérios de qualidade durante o desenvolvimento de seus produtos e nas
+            suas prestações de serviço, o NUTES dispõe das principais certificações relacionadas a Sistemas de Gestão da
+            Qualidade para produtos para saúde concedidas por organismos internacionais e pela ANVISA.
+          </p>
+        </div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-8">
+          <div class="certi" data-aos="fade-up">
+            <div class="row me-5" id="fixSobre">
+
+
+              <div class=" col text-center" data-aos="zoom-in" data-aos-delay="200">
+                <img class="seloSobre mt-4" src="assets/img/Certificacoes/cbpf.png">
+
+                <h3 class="mt-4">
+                  <strong class="span5S">CBPF</strong><br>
+                </h3>
+                <p> Boas Práticas de<br> Fabricação da Anvisa <br> para Produtos para Saúde</p>
+              </div>
+
+              <div class=" col text-center" data-aos="zoom-in" data-aos-delay="300">
+                <img class="seloSobre mt-4" src="assets/img/Certificacoes/iso.png">
+                <h3 class="mt-4">
+                  <strong class="span5S">ISO 13485</strong><br>
+                </h3>
+                <p>Sistema de Gestão<br> da Qualidade para<br> Produtos para Saúde</p>
+              </div>
+              <div class=" col text-center" data-aos="zoom-in" data-aos-delay="100">
+                <img class="seloSobre mt-4" src="assets/img/Certificacoes/mdsap.png">
+                <h3 class="mt-4">
+                  <strong class="span5S">MDSAP</strong><br>
+                </h3>
+                <p> Medical Device<br> Single Audit <br>
+                  Program</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <section id="politicas-da-qualidade" class="section">
+      <div class="row pt-5">
+        <div class="col-sm-4 fixPoli"></div>                 
+        <div class="col-sm-7">
+          <h3 class="mt-2 mb-4">
+            <strong class="span6S">Política da Qualidade</strong>
+          </h3>
+          <p class="span7S">
+            O NUTES atua de forma multidisciplinar no desenvolvimento, pesquisa, distribuição, produção e transferência
+            de tecnologias de dispositivos médicos, com abrangência nacional e comprometido com a manutenção e melhoria
+            contínua da eficácia do seu Sistema de Gestão da Qualidade, com os colaboradores em permanente
+            aperfeiçoamento, com foco no cliente e no atendimento às normas e legislações pertinentes. </p>
+        </div>
+        <div class="col-sm-6"></div>    
+        <!-- <div class="col-sm-8">
+          <div class="row">
+            <div class="col-sm-1"><img class="mqSobre mt-4" src="assets/img/banners/mq-logo.png"></div>
+            <div class="col-sm-10">
+              <h6 class="span8S">
+                <strong class="span8S">Para mais detalhes sobre os processos de qualidade do NUTES
+                </strong>
+              </h6>
+              <button class="btn-cardS">ACESSE NOSSO MANUAL DA QUALIDADE
+              </button>
+
+            </div>
+          </div>
+        </div> -->
+
+      </div>
+    </section>
+    <section id="areas-de-atuacao" class="section">
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-8">
+          <h3 class="mt-2 mb-4">
+            <strong class="span2S">Linhas de Atuação</strong>
+          </h3>
+          <p class="span3S">
+            O NUTES é constituído por laboratórios e unidades que oferecem uma ampla gama de serviços especializados
+            voltados para as necessidades da sociedade, principalmente em relação aos setores da saúde. Esses serviços
+            são
+            concentrados em cinco grandes áreas de atuação, cada uma compreendendo outras subáreas.
+
+          </p>
+        </div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-8">
+          <div class="certi" id="linhasAtuacao">
+            <div class="row me-5 espacamento-linhas">
+              <div class=" col">
+                <img class="seloSobre2 mt-4" src="/assets/img/banners/3d.png">
+                <p class="desc-areas"> Tecnologias <br> Tridimensionais</p>
+              </div>
+              <div class=" col">
+                <img class="seloSobre2 mt-4" src="/assets/img/banners/ped.png">
+                <p class="desc-areas"> Equipamentos Eletromédicos</p>
+              </div>
+              <div class=" col">
+                <img class="seloSobre2 mt-4" src="/assets/img/banners/usabilidade.png">
+                <p class="desc-areas">Usabilidade e <br>Fat. Humanos</p>
+              </div>
+              <div class=" col">
+                <img class="seloSobre2 mt-4" src="/assets/img/banners/peds.png">
+                <p class="desc-areas">Engenharia<br> de Software</p>
+              </div>
+              <div class=" col">
+                <img class="seloSobre2 mt-4" src="/assets/img/banners/services.png">
+                <p class="desc-areas">Serviços <br>Tecnológicos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="laboratorios" class="section">
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-8">
+          <h3 class="mt-2 mb-4">
+            <strong class="span2S">Laboratórios</strong>
+          </h3>
+          <p class="span3S">
+            Os laboratórios do NUTES se destacam pela sinergia resultante da combinação entre seus recursos humanos
+            altamente qualificados, uma infraestrutura avançada e equipamentos de última geração. Essa convergência
+            permite ao instituto consolidar sua posição no mercado como um centro de excelência, impulsionando avanços
+            tecnológicos em diversas áreas.
+          </p>
+        </div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-8">
+          <div class="certi">
+            <div class="row me-5">
+              <div class=" col text-center">
+                <img class="mandala mt-4" src="/assets/img/banners/RRR.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="fomento" class="section">
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-8">
+          <h3 class="mt-2 mb-4">
+            <strong class="span2S">Apoio / Fomento</strong>
+          </h3>
+          <p class="span3S">
+            O NUTES também presta serviços a instituições públicas e privadas com incentivos de fomento à inovação que
+            permitem e impulsionam o desenvolvimento de soluções na área da saúde e outras por meio de concessões de
+            incentivos
+            fiscais, subvenções econômicas, instrumentos de financiamento e capacitação de recursos humanos.
+
+          </p>
+        </div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-8">
+          <div class="certi">
+            <div class="row me-5">
+              <div class=" col text-center">
+                <img class="fomentoLogos mt-4" src="/assets/img/banners/embrapii.png">
+              </div>
+              <div class=" col text-center">
+                <img class="fomentoLogosF mt-4" src="/assets/img/banners/Finep.png">
+              </div>
+              <div class=" col text-center">
+                <img class="fomentoLogos mt-4" src="/assets/img/banners/Lei.png">
+              </div>
+              <div class=" col text-center">
+                <img class="fomentoLogos mt-4" src="/assets/img/banners/leidainformatica.png">
+              </div>
+            </div>
+            <div class="row mt-2 me-5">
+              <div class=" col text-center">
+                <img class="fomentoLogosP0 mt-4" src="/assets/img/banners/fapesp.png">
+              </div>
+              <div class=" col text-center">
+                <img class="fomentoLogosF mt-4" src="/assets/img/banners/cnpq.png">
+              </div>
+              <div class=" col text-center">
+                <img class="fomentoLogosP1 mt-4" src="/assets/img/banners/minis.png">
+              </div>
+              <div class=" col text-center">
+                <img class="fomentoLogosP2 mt-4" src="/assets/img/banners/sebrae.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="nossa-equipe" class="section">
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-8">
+          <h3 class="mt-5 mb-4">
+            <strong class="span9S">Nossa Equipe</strong>
+          </h3>
+          <p class="span7S">
+          </p>
+        </div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-8">
+          <div class="accordion mb-5 accordion-flush accordionEquipe" id="accordionFlushSobre">
+            <div class="accordion-item show">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+                  Gerência Executiva
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse accordionFlush show"
+                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushSobre">
+                <div class="accordion-body">
+                  <div class="certi">
+                    <div class="row fixProf me-5">
+                      <div class="col-md-4 custom-col">
+                        <img class="seloSobre mt-4 mb-2" src="/assets/img/banners/misael.jpeg">
+                        <p> Prof. Dr. Misael Morais<br>
+                          <strong>COORD. GERAL</strong><br>
+                        </p>
+                      </div>
+                      <div class="col-md-4 custom-col">
+                        <img class="seloSobre mt-4 mb-2" src="/assets/img/banners/eduardo.png">
+                        <p> Prof. Dr. Eduardo Jorge<br>
+                          <strong>COORD. GERAL</strong><br>
+                        </p>
+                      </div>
+                      <div class="col-md-4 custom-col">
+                        <img class="seloSobre mt-4 mb-2" src="/assets/img/banners/katia.png">
+                        <p> Profa. Dra. Kátia Galdino<br>
+                          <strong>COORD. ADMINISTRATIVA</strong><br>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Professores e Pesquisadores
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse accordionFlush collapse"
+                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushSobre">
+                <div class="accordion-body">
+                  <div class="certi">
+                    <div class="row fixProf">
+                      <div class="col-xl-4 custom-col">
+                        <img class="seloSobre mt-4 mb-2" src="/assets/img/banners/daniel.jpeg">
+                        <p> Prof. Dr. Daniel Scherer<br>
+                          <strong>COORD. (LUFH)</strong><br>
+                        </p>
+                      </div>
+                      <div class="col-xl-4 custom-col">
+                        <img class="seloSobre mt-4 mb-2" src="/assets/img/banners/Eujessika.jpeg">
+                        <p> Dra. Eujéssika Rodrigues<br>
+                          <strong>PESQUISADORA</strong><br>
+                        </p>
+                      </div>
+                      <div class="col-xl-4 custom-col">
+                        <img class="seloSobre mt-4 mb-2" src="/assets/img/banners/Fred.jpeg">
+                        <p> Prof. Dr. Fred Bublitz<br>
+                          <strong>PESQUISADOR</strong><br>
+                        </p>
+                      </div>
+                      <div class="col-xl-4 custom-col">
+                        <img class="seloSobre mt-4 mb-2" src="/assets/img/banners/Lauriston.jpeg">
+                        <p> Me. Lauriston Paixão<br>
+                          <strong>PESQUISADOR</strong><br>
+                        </p>
+                      </div>
+                      <div class="col-xl-4 custom-col">
+                        <img class="seloSobre mt-4 mb-2" src="/assets/img/banners/kezia.jpeg">
+                        <p> Profa. Dra. Kézia Dantas<br>
+                          <strong>PESQUISADOR</strong><br>
+                        </p>
+                      </div>
+                      <div class="col-xl-4 custom-col">
+                        <img class="seloSobre mt-4 mb-2" src="/assets/img/banners/Paulo.jpeg">
+                        <p> Prof. Dr. Paulo Barbosa<br>
+                          <strong>COORD. (LCB)</strong><br>
+                        </p>
+                      </div>
+                      <div class="col-xl-4 custom-col">
+                        <img class="seloSobre mt-4 mb-2" src="/assets/img/banners/Robson.jpeg">
+                        <p> Prof. Dr. Robson Pequeno<br>
+                          <strong>COORD. (LAIS)</strong><br>
+                        </p>
+                      </div>
+                      <div class="col-xl-4 custom-col">
+                        <img class="seloSobre mt-4 mb-2" src="/assets/img/banners/Rodolfo.jpeg">
+                        <p> Prof. Dr. Rodolfo Castelo<br>
+                          <strong>COORD. (LT3D)</strong><br>
+                        </p>
+                      </div>
+                      <div class="col-xl-4 custom-col">
+                        <img class="seloSobre mt-4 mb-2" src="/assets/img/banners/Sabrina.jpeg">
+                        <p> Profa. Dra. Sabrina Souto<br>
+                          <strong>COORD. (SISGH)</strong><br>
+                        </p>
+                      </div>
+                      <div class="col-xl-4 custom-col">
+                        <img class="seloSobre mt-4 mb-2" src="/assets/img/banners/Yasmine.jpeg">
+                        <p> Dra. Yasmyne Martins<br>
+                          <strong>COORD. (LT3D)</strong><br>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                  Sistema de Gestão da Qualidade
+                </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                data-bs-parent="#accordionFlushSobre">
+                <div class="accordion-body">
+                  <div class="certi">
+                    <div class="row fixProf">
+                      <div class="col-xl-4 custom-col">
+                        <img class="seloSobre mt-4 mb-2" src="/assets/img/fotos/qualidade/Diego.jpeg">
+                        <p> Me. Diego Cavalcanti<br>
+                          <strong>ANALISTA DE QUALIDADE</strong><br>
+                        </p>
+                      </div>
+                      <div class="col-xl-4 custom-col">
+                        <img class="seloSobre mt-4 mb-2" src="/assets/img/fotos/qualidade/jordao.jpeg">
+                        <p> Me. Jordão Moreira<br>
+                          <strong>ANALISTA DA QUALIDADE</strong><br>
+                        </p>
+                      </div>
+                      <div class="col-xl-4 custom-col">
+                        <img class="seloSobre mt-4 mb-2" src="/assets/img/fotos/qualidade/Mateus.jpeg">
+                        <p> Me. Mateus Antunes<br>
+                          <strong>COORD. DE PRODUÇÃO</strong><br>
+                        </p>
+                      </div>
+                      <div class="col-xl-4 custom-col">
+                        <img class="seloSobre mt-4 mb-2" src="/assets/img/fotos/qualidade/sheila.jpeg">
+                        <p> Ma. Sheilla Santana<br>
+                          <strong>TÉC. DA QUALIDADE</strong><br>
+                        </p>
+                      </div>
+
+                      <div class="col-xl-4 custom-col">
+                        <img class="seloSobre mt-4 mb-2" src="/assets/img/fotos/qualidade/Valério.jpg">
+                        <p>Me. Valério Batista<br>
+                          <strong>COORD. DA QUALIDADE</strong><br>
+                        </p>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container-footer">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <div class="row ">
+              <div class="col align-self-end footer-contacted">
+                <img id="logo-uepb" src="assets/img/social/uepb.png" class="" alt="">
+              </div>
+              <div class="col align-self-end">
+                <img id="logo-nutes" src="assets/img/social/nutes.png" class="" alt="">
+              </div>
+            </div>
+            <div class="col">
+              <p>Centro de referência para pesquisa, desenvolvimento, produção, inovação e prestação aplicada de
+                serviços
+                tecnológicos relacionados à saúde.</p>
+              <h4 id="footerh4">Conecte-se ao NUTES:</h4>
+              <div class="social-links">
+                <a href="https://www.instagram.com/nutesuepb/" target="_blank" class="instagram"><img class=""
+                    src="assets/img/social/instaBlack.png"></img></a>
+                <a href="https://pt-br.facebook.com/people/NUTES-UEPB/100063728133055/" target="_blank"
+                  class="facebook"><img class="" src="assets/img/social/facebookBlack.png"></img></a>
+                <a href="https://www.linkedin.com/in/nutes-uepb-457111150/" target="_blank" class=""><img class=""
+                    src="assets/img/social/linkedinBlack.png"></img></a>
+                <a href="https://twitter.com/nutesuepb" target="_blank" class="twitter"><img class=""
+                    src="assets/img/social/twitterBlack.png"></img></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>CONTATO</h4>
+            <ul>
+              <li>
+                <i class="bi bi-telephone-fill"></i>
+                <!-- <a href="tel:8333153336">(83) 3315-3336</a> -->
+                <a>(83) 3315-3336</a>
+              </li>
+              <li><i class="bi bi-envelope-fill"></i> <a href=mailto:nutes@setor.uepb.edu.br>nutes@setor.uepb.edu.br</a>
+              </li>
+              <li>
+                <i class="bi bi-mortarboard-fill"></i>
+                <a href="https://treinamentos.nutes.uepb.edu.br" target="_blank">treinamentos.nutes.uepb.edu.br</a>
+              </li>
+              <li><i class="bi bi-stopwatch-fill"></i> <a>Segunda a Sexta-feira
+                  08 às 17h </a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>PÁGINAS</h4>
+            <ul>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="index.html">HOME</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="sobre.html">SOBRE</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a
+                  href="instalacoes/instalacoes.html">INSTALAÇÕES</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a
+                  href="laboratorios/laboratorios.html">LABORATÓRIOS</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="servicos.html">SERVIÇOS</a></li>
+              <!-- <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="#">PRODUTOS</a></li> -->
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="embrapii.html">EMBRAPII</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="noticias.html">NOTÍCIAS</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="contato.html">CONTATO</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>VISITE-NOS</h4>
+            <div id="link-container">
+              <i id="link-icon" class="bi bi-geo-alt-fill"></i>
+              <a id="link-a" href="#">Rua Baraúnas, 351 Bairro Universitário
+                Campina Grande-PB CEP: 58429-500</a>
+
+            </div>
+            <div class="w-100">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.39184486773223!2d-35.915630262128!3d-7.21006368983313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ac1fd57d8c7c8d%3A0x94de9e94cb6a462f!2sN%C3%BAcleo%20de%20Tecnologias%20Estrat%C3%A9gicas%20em%20Sa%C3%BAde%20(NUTES)!5e0!3m2!1spt-BR!2sbr!4v1712237858888!5m2!1spt-BR!2sbr"
+                width="400" height="300" style="border:0;" allowfullscreen="" id="iframeMapa" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom clearfix">
+      <div class="footer-texts-container">
+        <p class="">Desenvolvido pelo <a href="#">NUTES</a></p>
+        <div class="">&copy; Copyright 2024 <strong><span>NUTES</span></strong>. All Rights Reserved</div>
+        <div class="">Revisão 00</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- End Footer -->
+
+  <!-- <div id="preloader"></div> 
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a> -->
+
+
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

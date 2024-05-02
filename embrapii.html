@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>NUTES</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <!-- <link href="assets/img/favicon.png" rel="icon"> -->
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- mapa -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Coordenadas do seu endereço
+    var coordenadas = [-7.217860, -35.873963]; // Substitua pelas coordenadas reais
+
+    // Criar mapa e adicionar à div com a classe "mapa"
+    var mapa = L.map('mapa').setView(coordenadas, 15); // 15 é o nível de zoom, ajuste conforme necessário
+
+    // Adicionar camada de mapa do OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(mapa);
+
+    // Adicionar marcador no endereço
+    L.marker(coordenadas).addTo(mapa)
+      .bindPopup('Localização da Empresa')
+      .openPopup();
+  </script>
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+
+
+
+
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-menu">
+    <nav class="navbar ">
+      <div class="menu-itens">
+        <a href="index.html" class="logo"><img src="assets/img/LOGO.svg" alt="" class="img-fluid"></a>
+        <ul class="menu">
+          <li><a class="nav-link" href="index.html">HOME</a></li>
+          <li><a class="nav-link" href="sobre.html">SOBRE</a></li>
+          <li><a class="nav-link" href="/instalacoes/instalacoes.html">INSTALAÇÕES</a></li>
+          <li><a class="nav-link" href="/laboratorios/laboratorios.html">LABORATÓRIOS</a></li>
+          <li><a class="nav-link" href="servicos.html">SERVIÇOS</a></li>
+          <li><a class="nav-link active" href="embrapii.html">EMBRAPII</a></li>
+          <li><a class="nav-link" href="noticias.html">NOTÍCIAS</a></li>
+          <li><a class="nav-link" href="contato.html">CONTATO</a></li>
+        </ul>
+      </div>
+
+      <div class="social-icons">
+        <div id="navbar-search-autocomplete" style="display: none;" data-mdb-input-init>
+          <input type="search" id="form1" class="form-control-search me-2" oninput="search()" autocomplete="off" />
+          <ul id="searchResults" class="dropdown-menu mt-2" aria-labelledby="form1">
+          </ul>
+        </div>
+        <img class="lupa" id="img-lupa" onclick="toggleSearch()" src="assets/img/social/lupa.png"
+          style="cursor: pointer;" />
+
+        <div class="dropdown" style="display: inline-block;">
+          <img class="brasil" src="assets/img/social/brazil.svg" onclick="toggleDropdown()" style="cursor: pointer;" />
+          <div id="languageDropdown" class="dropdown-content" style="display: none;">
+            <div class="row justify-content-center">
+              <div class="col-sm-3">
+                <a href="#" onclick="setLanguage('pt')">
+                  <img src="assets/img/social/brazil.svg" />
+                </a>
+              </div>
+              <div class="col-sm-3">
+                <a href="#" onclick="setLanguage('es')">
+                  <img src="assets/img/social/spain.svg" />
+                </a>
+              </div>
+              <div class="col-sm-3">
+                <a href="#" onclick="setLanguage('en')">
+                  <img src="assets/img/social/usa.svg" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <img class="line" src="assets/img/social/line.svg" style="cursor: pointer;" />
+        <img class="instagram" src="assets/img/social/instagram.svg" style="cursor: pointer;" />
+        <img class="facebook" src="assets/img/social/facebook.svg" style="cursor: pointer;" />
+        <img class="linkedin" src="assets/img/social/linkedin.svg" style="cursor: pointer;" />
+        <img class="twitter" src="assets/img/social/twitter.svg" style="cursor: pointer;" />
+      </div>
+    </nav>
+  </header>
+  <!-- End Header -->
+
+
+
+
+  <main id="main">
+    <div id="" class="row mt-5">
+
+      <div class="col-md-1  "></div> <!-- Espaço à esquerda -->
+      <div class="col-md-10 mt-5 mb-5 card-text-embrapii-width">
+
+
+
+
+        <div class="card-group mt-5">
+
+          <div class="card-body card-back ">
+            <h3 class="text-servicos  mb-4"><strong>Sobre a Unidade</strong></h3>
+            <p class="card-text-noticias-esp mb-4 card-text-embrapii-esp">
+              O Núcleo de Tecnologia Estratégica em Saúde (NUTES) da Universidade Estadual da Paraíba (UEPB), enquanto
+              Unidade EMBRAPII, atua no desenvolvimento de projetos no setor da saúde em conformidade com requisitos
+              de boas práticas de fabricação da Anvisa e padrões internacionais de segurança e eficácia. Seu escopo de
+              atividades associadas à EMBRAPII envolve as seguintes áreas: engenharia de software; projeto,
+              desenvolvimento e fabricação de equipamentos eletromédicos; usabilidade e fatores humanos; e tecnologias
+              tridimensionais. Tais atividades são conduzidas por profissionais multidisciplinares.
+            </p>
+            <div id="espacamentoLogos" class="row ">
+              <div class="col-md-3  mt-5">
+                <img src="/assets/img/embrapii/nutes.png" class="card-img-top mt-3 " alt="...">
+              </div>
+              <div class="col-md-3  mt-1">
+                <img src="/assets/img/embrapii/embrapii.png" class="card-img-top " alt="...">
+              </div>
+            </div>
+          </div>
+
+          <div class="card-body card-back mt-3 ">
+            <h3 class="text-servicos  mb-4"><strong>Parcerias e Áreas de Atuação</strong></h3>
+            <p class="card-text-noticias-esp mb-2 card-text-embrapii-esp">
+              Para esse propósito, o NUTES, localizado na cidade de Campina Grande, Paraíba, estabelece parcerias com
+              instituições do setor privado e organizações públicas, resultando em um histórico de projetos
+              desenvolvidos e distribuídos para clientes nacionais e internacionais.<br><br>
+              Na execução de projetos EMBRAPII, o NUTES concentra suas atividades na área de Tecnologias em Saúde
+              através dos seguintes laboratórios:<br>
+            <div class="row">
+              <div class="col-md-8">
+                <ul class="card-text-noticias-esp">
+                  <li class="p-2">Laboratório de Sistemas de Gestão Hospitalar (LAB-SISGH);</li>
+                  <li class="p-2">Laboratório de Análise de Imagens e Sinais (LAIS);</li>
+                  <li class="p-2">Laboratório de Computação Biomédica (LCB);</li>
+                  <li class="p-2">Laboratório de Tecnologias 3D (LT3D);</li>
+                  <li class="p-2">Laboratório de Usabilidade e Fatores Humanos (LUFH);</li>
+                  <li class="p-2">Unidade de Fabricação de Dispositivos Médicos (UFDM);</li>
+                  <li class="p-2">Laboratório de Instrumentação Biomédica e Ensaios Eletrônicos (LIBEE);</li> 
+                  <li class="p-2">Sense Lab.</li>
+                  </p>
+                </ul>
+              </div>
+              <div class="col-md-3 ms-3 mt-5"><a href="https://embrapii.org.br/" target="_blank"><img 
+                    src="/assets/img/embrapii/logo.png" class="card-img-toper " alt="..."></a>
+              </div>
+
+            </div>
+          </div>
+          <div class="card-body card-back mt-3">
+            <h3 class="text-servicos  mb-4"><strong>Financiamento</strong></h3>
+            <p class="card-text-noticias-esp mb-4 card-text-embrapii-esp">
+              A EMBRAPII opera um modelo de financiamento em que parte dos custos do projeto é coberta pela instituição,
+              reduzindo assim o ônus financeiro para a empresa. Em geral, a EMBRAPII pode financiar até 1/3 do valor
+              total do projeto, enquanto os outros 2/3 são divididos entre a empresa parceira e a Unidade EMBRAPII
+              responsável pela execução do projeto, que geralmente é um centro de tecnologia vinculado a uma
+              universidade.
+            </p>
+          </div>
+          <div class="card-body card-back mt-3 mb-4">
+            <h3 class="text-servicos  mb-4"><strong>Estrutura</strong></h3>
+            <p class="card-text-noticias-esp mb-4 card-text-embrapii-esp">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec semper egestas nibh, vehicula euismod diam.
+              Sed vestibulum nisi quis orci lobortis, id hendrerit felis fermentum. Nullam efficitur ante ac massa
+              tristique, sed convallis urna aliquet. Nunc a risus efficitur, placerat justo quis, pellentesque turpis.
+            </p>
+            <div class="d-flex justify-content-center flex-column align-items-center">
+              <div>
+                <iframe width="660" height="415" src="https://www.youtube.com/embed/yM4bYyC1HU0?si=-z-tN3x8xtRVk8zi"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <div class="text-center mt-3 card-text-noticias-esp">
+                <h5><strong>Legenda: </strong>Vídeo da Abertura </h5>
+              </div>
+            </div>
+          </div>
+
+          <p class="d-flex justify-content-between align-items-center me-3 mb-2 mt-5">
+            <a href="https://embrapii.org.br/" target="_blank" class="card-text-noticias-esp">
+              <img class="mb-1" src="/assets/img/social/arrow-blue.png" alt="Seta" /> Para mais informações clique e
+              acesse o<strong>
+                site da EMBRAPII</strong>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-1 ms-3"></div> <!-- Espaço à direita -->
+    </div>
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container-footer">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <div class="row ">
+              <div class="col align-self-end footer-contacted">
+                <img id="logo-uepb" src="assets/img/social/uepb.png" class="" alt="">
+              </div>
+              <div class="col align-self-end">
+                <img id="logo-nutes" src="assets/img/social/nutes.png" class="" alt="">
+              </div>
+            </div>
+            <div class="col">
+              <p>Centro de referência para pesquisa, desenvolvimento, produção, inovação e prestação aplicada de
+                serviços
+                tecnológicos relacionados à saúde.</p>
+              <h4 id="footerh4">Conecte-se ao NUTES:</h4>
+              <div class="social-links">
+                <a href="https://www.instagram.com/nutesuepb/" target="_blank" class="instagram"><img class=""
+                    src="assets/img/social/instaBlack.png"></img></a>
+                <a href="https://pt-br.facebook.com/people/NUTES-UEPB/100063728133055/" target="_blank"
+                  class="facebook"><img class="" src="assets/img/social/facebookBlack.png"></img></a>
+                <a href="https://www.linkedin.com/in/nutes-uepb-457111150/" target="_blank" class=""><img class=""
+                    src="assets/img/social/linkedinBlack.png"></img></a>
+                <a href="https://twitter.com/nutesuepb" target="_blank" class="twitter"><img class=""
+                    src="assets/img/social/twitterBlack.png"></img></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>CONTATO</h4>
+            <ul>
+              <li>
+                <i class="bi bi-telephone-fill"></i>
+                <!-- <a href="tel:8333153336">(83) 3315-3336</a> -->
+                <a>(83) 3315-3336</a>
+              </li>
+              <li><i class="bi bi-envelope-fill"></i> <a href=mailto:nutes@setor.uepb.edu.br>nutes@setor.uepb.edu.br</a>
+              </li>
+              <li>
+                <i class="bi bi-mortarboard-fill"></i>
+                <a href="https://treinamentos.nutes.uepb.edu.br" target="_blank">treinamentos.nutes.uepb.edu.br</a>
+              </li>
+              <li><i class="bi bi-stopwatch-fill"></i> <a>Segunda a Sexta-feira
+                  08 às 17h </a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>PÁGINAS</h4>
+            <ul>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="index.html">HOME</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="sobre.html">SOBRE</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a
+                  href="instalacoes/instalacoes.html">INSTALAÇÕES</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a
+                  href="laboratorios/laboratorios.html">LABORATÓRIOS</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="servicos.html">SERVIÇOS</a></li>
+              <!-- <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="#">PRODUTOS</a></li> -->
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="embrapii.html">EMBRAPII</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="noticias.html">NOTÍCIAS</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="contato.html">CONTATO</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>VISITE-NOS</h4>
+            <div id="link-container">
+              <i id="link-icon" class="bi bi-geo-alt-fill"></i>
+              <a id="link-a" href="#">Rua Baraúnas, 351 Bairro Universitário
+                Campina Grande-PB CEP: 58429-500</a>
+
+            </div>
+            <div class="w-100">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.39184486773223!2d-35.915630262128!3d-7.21006368983313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ac1fd57d8c7c8d%3A0x94de9e94cb6a462f!2sN%C3%BAcleo%20de%20Tecnologias%20Estrat%C3%A9gicas%20em%20Sa%C3%BAde%20(NUTES)!5e0!3m2!1spt-BR!2sbr!4v1712237858888!5m2!1spt-BR!2sbr"
+                width="400" height="300" style="border:0;" allowfullscreen="" id="iframeMapa" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom clearfix">
+      <div class="footer-texts-container">
+        <p class="">Desenvolvido pelo <a href="#">NUTES</a></p>
+        <div class="">&copy; Copyright 2024 <strong><span>NUTES</span></strong>. All Rights Reserved</div>
+        <div class="">Revisão 00</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- End Footer -->
+
+  <!-- <div id="preloader">
+    <img src="/assets/img/preloader.gif" alt="Carregando...">
+  </div> -->
+  <!-- <div class="preloaderBg" id="preloader" onload="preloader()">
+    <div class="preloader"></div>
+    <div class="preloader2"></div>
+  </div>
+
+  <script>
+    var preloadTime;
+
+    function preloader() {
+      preloadTime = setTimeout(showPage, 5000);
+    }
+
+    function showPage() {
+      document.getElementById("preloader").style.display = "none";
+    }</script> -->
+
+
+  <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a> -->
+  <!-- Adicione esta função ao seu script -->
+  <!-- Adicione este script ao final do seu HTML -->
+
+
+
+
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    function carregarXML() {
+      // Fazer uma requisição AJAX para carregar o arquivo XML
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4) {
+          if (this.status == 200) {
+            // Verificar se o conteúdo do arquivo XML é válido
+            if (this.responseXML !== null) {
+              // Parsear o XML
+              var xmlDoc = this.responseXML;
+              // Extrair os dados dos posts
+              var posts = xmlDoc.getElementsByTagName("item");
+              var postsHTML = ""; // Variável para armazenar o HTML dos posts
+              var postsHTML2 = ""; // Variável para armazenar o HTML dos posts
+
+
+
+              // Iterar sobre os últimos três posts do XML e armazená-los em um array temporário invertido
+              var startIndex = Math.max(0, posts.length - 3); // Garante que não exceda o tamanho do array
+              var tempPosts = [];
+              for (var i = posts.length - 1; i >= startIndex; i--) {
+                var titulo = posts[i].getElementsByTagName("title")[0].textContent;
+                var categoria = posts[i].getElementsByTagName("category")[0].textContent;
+                var conteudoEncoded = posts[i].getElementsByTagName("content:encoded")[0].textContent;
+
+                // Extrair o src da tag img dentro do conteúdo
+                var srcMatch = conteudoEncoded.match(/src="([^"]+)"/);
+                var src = srcMatch ? srcMatch[1] : ''; // src da imagem
+
+
+
+                // Aqui você pode processar os dados e gerar o HTML para cada post
+                var postHTML =
+                  '<div class="col-md-4 section-desc" data-aos-delay="100">' +
+                  '<article>' +
+                  '<div class="post-img">' +
+                  '<img src="' + src + '" alt="" class="img-fluid">' +
+                  '</div>' +
+                  '<p class="post-category">' + categoria + '</p>' +
+                  '<h2  class="title">' +
+                  '<a id="line2" href="blog-details.html">' + titulo + '</a>' +
+                  '</h2>' +
+                  '<p class="post-more">Saiba mais ></p>' +
+                  '</article>' +
+                  '</div>';
+
+                tempPosts.push(postHTML); // Adiciona o HTML do post ao array temporário
+              }
+
+              // Inverter a ordem das postagens antes de adicioná-las ao HTML
+              postsHTML = tempPosts.join('');
+
+              var startIndex2 = Math.max(3, posts.length - 6); // Garante que não exceda o tamanho do array
+              var tempPosts2 = [];
+              for (var i = posts.length - 4; i >= startIndex2; i--) {
+                var titulo2 = posts[i].getElementsByTagName("title")[0].textContent;
+                var categoria2 = posts[i].getElementsByTagName("category")[0].textContent;
+
+
+                // Aqui você pode processar os dados e gerar o HTML para cada post
+                var postHTML2 =
+                  '<div class="col-md-4 section-desc" data-aos-delay="100">' +
+                  '<article>' +
+                  '<div class="post-img">' +
+                  '<img src="assets/img/blog/imagem1.png" alt="" class="img-fluid">' +
+                  '</div>' +
+                  '<p class="post-category">' + categoria2 + '</p>' +
+                  '<h2 class="title">' +
+                  '<a id="line2" href="blog-details.html">' + titulo2 + '</a>' +
+                  '</h2>' +
+                  '<p class="post-more">Saiba mais ></p>' +
+                  '</article>' +
+                  '</div>' +
+                  '</div>' +
+                  '</div>';
+
+                tempPosts2.push(postHTML2);  // Adiciona o HTML do post à variável postsHTML
+              }
+              // Inverter a ordem das postagens antes de adicioná-las ao HTML
+              postsHTML2 = tempPosts2.join('');
+
+              // Adiciona o HTML dos posts à div com class "carousel-inner"
+              document.querySelector(".adicionar-conteudo").innerHTML = postsHTML;
+              document.querySelector(".adicionar-conteudo2").innerHTML = postsHTML2;
+
+
+            }
+            // Iterar sobre os últimos três posts do XML
+
+
+            else {
+              // Exibir uma mensagem de erro se o conteúdo do arquivo XML for inválido
+              document.getElementById("posts").innerHTML = "<p>Erro ao carregar o conteúdo do arquivo XML.</p>";
+              console.log("Erro ao carregar o conteúdo do arquivo XML");
+            }
+          } else {
+            // Exibir uma mensagem de erro se houver um erro ao carregar o arquivo XML
+            document.getElementById("posts").innerHTML = "<p>Erro ao carregar o arquivo XML.</p>";
+            console.log("Erro ao carregar o conteúdo do arquivo XML");
+          }
+        }
+      };
+      // Especificar o caminho do arquivo XML
+      xhttp.open("GET", "noticias/not.xml", false); // Verifique se o caminho do arquivo XML está correto
+      xhttp.send();
+    }
+
+
+
+    //Chamar a função quando a página for carregada
+    window.onload = carregarXML;
+  </script>
+
+
+
+</body>
+
+</html>

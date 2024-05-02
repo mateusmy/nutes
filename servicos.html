@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>NUTES</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <!-- <link href="assets/img/favicon.png" rel="icon"> -->
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-menu">
+    <nav class="navbar ">
+      <div class="menu-itens">
+        <a href="index.html" class="logo"><img src="assets/img/LOGO.svg" alt="" class="img-fluid"></a>
+        <ul class="menu">
+          <li><a class="nav-link " href="index.html">HOME</a></li>
+          <li><a class="nav-link" href="sobre.html">SOBRE</a></li>
+          <li><a class="nav-link" href="/instalacoes/instalacoes.html">INSTALAÇÕES</a></li>
+          <li><a class="nav-link" href="/laboratorios/laboratorios.html">LABORATÓRIOS</a></li>
+          <li><a class="nav-link active" href="servicos.html">SERVIÇOS</a></li>
+          <li><a class="nav-link" href="embrapii.html">EMBRAPII</a></li>
+          <li><a class="nav-link" href="noticias.html">NOTÍCIAS</a></li>
+          <li><a class="nav-link" href="contato.html">CONTATO</a></li>
+        </ul>
+      </div>
+
+      <div class="social-icons">
+        <div id="navbar-search-autocomplete" style="display: none;" data-mdb-input-init>
+          <input type="search" id="form1" class="form-control-search me-2" oninput="search()" autocomplete="off" />
+          <ul id="searchResults" class="dropdown-menu mt-2" aria-labelledby="form1">
+          </ul>
+        </div>
+        <img class="lupa" id="img-lupa" onclick="toggleSearch()" src="assets/img/social/lupa.png"
+          style="cursor: pointer;" />
+
+        <div class="dropdown" style="display: inline-block;">
+          <img class="brasil" src="assets/img/social/brazil.svg" onclick="toggleDropdown()" style="cursor: pointer;" />
+          <div id="languageDropdown" class="dropdown-content" style="display: none;">
+            <div class="row justify-content-center">
+              <div class="col-sm-3">
+                <a href="#" onclick="setLanguage('pt')">
+                  <img src="assets/img/social/brazil.svg" />
+                </a>
+              </div>
+              <div class="col-sm-3">
+                <a href="#" onclick="setLanguage('es')">
+                  <img src="assets/img/social/spain.svg" />
+                </a>
+              </div>
+              <div class="col-sm-3">
+                <a href="#" onclick="setLanguage('en')">
+                  <img src="assets/img/social/usa.svg" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <img class="line" src="assets/img/social/line.svg" style="cursor: pointer;" />
+        <img class="instagram" src="assets/img/social/instagram.svg" style="cursor: pointer;" />
+        <img class="facebook" src="assets/img/social/facebook.svg" style="cursor: pointer;" />
+        <img class="linkedin" src="assets/img/social/linkedin.svg" style="cursor: pointer;" />
+        <img class="twitter" src="assets/img/social/twitter.svg" style="cursor: pointer;" />
+      </div>
+    </nav>
+  </header>
+  <!-- End Header -->
+
+  <main id="">
+    <section id="" class="">
+      <div class="row mt-5">
+        <div class="col-md-1"></div> <!-- Espaço à esquerda -->
+        <div class="col-md-10 mt-5">
+          <h3 class="text-servicos mt-5 mb-4"><strong>Subáreas e Serviços</strong></h3>
+          <p class="text-servicos2 mb-5">Oferecemos uma ampla gama de serviços que abrangem desde o desenvolvimento de
+            soluções para a área da saúde
+            até a produção de dispositivos médicos, todos projetados para atender às demandas do mercado e necessidades
+            do cliente. Esses serviços são distribuidos em subáreas que envolvem diferentes setores do NUTES com
+            especialidades próprias.
+          </p>
+
+          <div class="accordion mt-3 mb-5 accordion-flush accordionServices" id="accordionFlushExample">
+
+            <div class="accordion-item-service">
+              <h2 class="accordion-header" id="flush-headingFive">
+                <button class="accordion-button mb-2 collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFive" aria-expanded="true" aria-controls="flush-collapseFive">
+                  1.      Manufatura Aditiva
+                </button>
+              </h2>
+              <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body-service">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="assets/img/services/1b.gif" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong>LEGENDA: </strong>REDE NEURAL RECORRENTE (RNN) <br>RECORRENTE ASSDS DE
+                                BRASILIA </h5>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/img/services/1c.gif" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong>Legenda: </strong>Rede Neural </h5>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/img/services/Val.jpg" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong> </strong>SINTOMAS RECORRENTES </h5>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-8 back-services">
+                      <p class="text-servicos4 ms-3 mt-4"></p>
+
+                      <ul class="text-servicos3 me-2 fs-5">
+                        <li>Projetos desenvolvidos por ferramentas computacionais CAD e CAE;</li>
+                        <li>Desenvolvimento de instrumentação cirúrgica;</li>
+                        <li>Metrologia e captação de imagens digitais por meio de escaneamento 3D;</li>
+                        <li>Desenvolvimento de projetos de órteses e próteses (OPM), por meio de ferramentas de
+                          tecnologias 3D;</li>
+                        <li>Desenvolvimento de biomodelos e guias de cirurgia customizados para planejamento cirúrgico;
+                        </li>
+                        <li>Construção de mock-up para validação de produtos;</li>
+                        <li>Análise por simulações computacionais do tipo estrutural, topologia, modal, não lineares,
+                          deformações plásticas, estática e dinâmica, fratura, fadiga, conformação plástica, flambagem,
+                          impacto, térmica e fluido CFD;</li>
+                        <li>Desenvolvimento de produtos por materiais poliméricos com carga de compósitos (poliamida,
+                          fibra
+                          de carbono e nylon);</li>
+                        <li>Projetos e documentações técnicas utilizando ferramentas computacionais CAD;</li>
+                        <li>Testes e validações por simulações computacionais CAE (Elementos Finitos).</li>
+                      </ul>
+                      <!-- <p class="justify-self-end back-services2 me-3 mb-2"><button class="btn-cardS">+ SAIBA MAIS -->
+                      </button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item-service">
+              <h2 class="accordion-header" id="flush-headingSix">
+                <button class="accordion-button mb-2 collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                  2.     Ensaios de Microtomografia (microCT)
+                </button>
+              </h2>
+              <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body-service">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="assets/img/services/1b.gif" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong>LEGENDA: </strong>REDE NEURAL RECORRENTE (RNN) <br>RECORRENTE ASSDS DE
+                                BRASILIA </h5>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/img/services/1c.gif" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong>Legenda: </strong>Rede Neural </h5>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/img/services/Val.jpg" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong> </strong>SINTOMAS RECORRENTES </h5>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-8 back-services">
+                      <p class="text-servicos4 ms-3 mt-4"></p>
+
+                      <ul class="text-servicos3 me-2 fs-5">
+                        <li>Metrologia de digitalização de micro tomografia computadorizada de alta precisão;</li>
+                        <li>Análise 3D em imagens de precisão;</li>
+                        <li>Análise de varredura de imagens tomográficas 3D;</li>
+                        <li>Análise de inspeção em estruturas micro e nanométricas;</li>
+                        <li>Tecnologia avançada com remoção de artefatos de dispersão em imagens de microtomografia
+                          (microCT) computadorizada;</li>
+                        <li>Análise de porosidade de materiais;</li>
+                        <li>Ensaios não destrutivos em materiais e dispositivos.</li>
+                      </ul>
+                      <!-- <p class="justify-self-end back-services2 me-3 mb-2"><button class="btn-cardS">+ SAIBA MAIS -->
+                      </button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item-service">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button mb-2 collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+                  3.     Análise e Processamento de Imagens Médicas
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body-service">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="assets/img/services/1b.gif" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong>LEGENDA: </strong>REDE NEURAL RECORRENTE (RNN) <br>RECORRENTE ASSDS DE
+                                BRASILIA </h5>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/img/services/1c.gif" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong>Legenda: </strong>Rede Neural </h5>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/img/services/Val.jpg" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong> </strong>SINTOMAS RECORRENTES </h5>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-8 back-services">
+                      <p class="text-servicos4 mt-4 "></p>
+                      <ul class="text-servicos3 me-2 fs-5">
+                        <li>Escaneamento tridimensional em produtos fabricados por manufatura aditiva;</li>
+                        <li>Desenvolvimento de software para processamento de imagens;</li>
+                        <li>Desenvolvimento de simulações computacionais de produtos industriais;</li>
+                        <li>Desenvolvimento de ferramentas com realidade aumentada;</li>
+                        <li>Desenvolvimento de ferramentas com realidade virtual para aplicação direta em cirurgias
+                          guiadas;</li>
+                        <li>Identificação e correção de ruídos em imagens médicas;</li>
+                        <li>Desenvolvimento de ferramentas para detecção de anomalias em imagens e vídeos;</li>
+                        <li>Desenvolvimento de ferramentas para rastreamento de padrões de patologias em imagens e
+                          vídeos;</li>
+                        <li>Desenvolvimento de ferramentas para identificação de falhas em produtos por meio de visão
+                          computacional.</li>
+                      </ul>
+                      <!-- <p class="justify-self-end back-services2 me-3 mb-2"><button class="btn-cardS">+ SAIBA MAIS -->
+                      </button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item-service">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button mb-2 collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo" aria-expanded="true" aria-controls="flush-collapseTwo">
+                  4.     Desenvolvimento de Software
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body-service">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="assets/img/services/1b.gif" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong>LEGENDA: </strong>REDE NEURAL RECORRENTE (RNN) <br>RECORRENTE ASSDS DE
+                                BRASILIA </h5>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/img/services/1c.gif" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong>Legenda: </strong>Rede Neural </h5>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/img/services/Val.jpg" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong> </strong>SINTOMAS RECORRENTES </h5>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-8 back-services">
+                      <p class="text-servicos4 mt-4"></p>
+
+                      <ul class="text-servicos3 me-2 fs-5">
+                        <li>Desenvolvimento de soluções em Inteligência Artificial na área da saúde;</li>
+                        <li>Desenvolvimento de Front-End e Back-End para interfaces Web e Mobile;</li>
+                        <li>Desenvolvimento de sistemas de gestão em saúde;</li>
+                        <li>Modelagem de software para conformidade com normas de segurança, LGPD e normas Europeias;
+                        </li>
+                        <li>Avaliação e aprimoramento da segurança de software em dispositivos médicos;</li>
+                        <li>Desenvolvimento de sistemas de prontuário eletrônico para áreas remotas/distribuídas;</li>
+                        <li>Desenvolvimento de ERPs (Enterprise Resource Planning) para engenharia clínica;</li>
+                        <li>Desenvolvimento de Softwares as Medical Devices (SaMD);</li>
+                        <li>Desenvolvimento de softwares para dispositivos médicos;</li>
+                        <li>Desenvolvimento de aplicações utilizando Internet das Coisas (IoT);</li>
+                        <li>Desenvolvimento de plataformas inteligentes com analytics.</li>
+                      </ul>
+                      <!-- <p class="justify-self-end back-services2 me-3 mb-2"><button class="btn-cardS">+ SAIBA MAIS -->
+                      </button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item-service">
+              <h2 class="accordion-header" id="flush-headingFour">
+                <button class="accordion-button mb-2 collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                  5.     Desenvolvimento de Dispositivos Médicos 
+                </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body-service">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="assets/img/services/1b.gif" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong>LEGENDA: </strong>REDE NEURAL RECORRENTE (RNN) <br>RECORRENTE ASSDS DE
+                                BRASILIA </h5>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/img/services/1c.gif" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong>Legenda: </strong>Rede Neural </h5>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/img/services/Val.jpg" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong> </strong>SINTOMAS RECORRENTES </h5>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-8 back-services">
+                      <p class="text-servicos4 ms-3 mt-4"></p>
+
+                      <ul class="text-servicos3 me-2 fs-5">
+                        <li>Projeto e desenvolvimento de equipamentos eletromédicos;</li>
+                        <li>Desenvolvimento de dispositivos de telemedicina;</li>
+                        <li>Especificação e prototipação de sistemas eletromédicos;</li>
+                        <li>Desenvolvimento de instrumentação eletrônica;</li>
+                        <li>Sistemas embarcados (software e hardware);</li>
+                        <li>Implementação de telemetria em sistemas eletromédicos;</li>
+                        <li>Aplicações Smart com sensores;</li>
+                        <li>Aplicações tecnológicas de rastreabilidade.</li>
+                      </ul>
+                      <!-- <p class="justify-self-end back-services2 me-3 mb-2"><button class="btn-cardS">+ SAIBA MAIS -->
+                      <!-- </button> -->
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item-service">
+              <h2 class="accordion-header" id="flush-headingEight">
+                <button class="accordion-button mb-2 collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                  6.     Suporte a Fabricação de Dispositivos Médicos 
+                </button>
+              </h2>
+              <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body-service">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="assets/img/services/1b.gif" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong>LEGENDA: </strong>REDE NEURAL RECORRENTE (RNN) <br>RECORRENTE ASSDS DE
+                                BRASILIA </h5>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/img/services/1c.gif" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong>Legenda: </strong>Rede Neural </h5>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/img/services/Val.jpg" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong> </strong>SINTOMAS RECORRENTES </h5>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-8 back-services">
+                      <p class="text-servicos4 ms-3 mt-4"></p>
+
+                      <ul class="text-servicos3 me-2 fs-5">
+                        <li>Projeto e fabricação de dispositivos médicos em condições de boas práticas de fabricação;
+                        </li>
+                        <li>Desenvolvimento e sistematização de processos produtivos;</li>
+                        <li>Aplicação de programas soft landing;</li>
+                        <li>Desenvolvimento de softwares para dispositivos médicos;
+                        </li>
+                        <li>Validação de softwares para saúde;
+                        </li>
+                        <li>Mentoria para processos de certificação de sistemas da qualidade;
+                        </li>
+                        <li>Validação de processos fabris in loco.
+                        </li>
+                      </ul>
+                      <!-- <p class="justify-self-end back-services2 me-3 mb-2"><button class="btn-cardS">+ SAIBA MAIS -->
+                      <!-- </button> -->
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item-service">
+              <h2 class="accordion-header" id="flush-headingSeven">
+                <button class="accordion-button mb-2 collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                  7.     Avaliações de Usabilidade
+                </button>
+              </h2>
+              <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body-service">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="assets/img/services/1b.gif" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong>LEGENDA: </strong>REDE NEURAL RECORRENTE (RNN) <br>RECORRENTE ASSDS DE
+                                BRASILIA </h5>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/img/services/1c.gif" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong>Legenda: </strong>Rede Neural </h5>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/img/services/Val.jpg" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong> </strong>SINTOMAS RECORRENTES </h5>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-8 back-services">
+                      <p class="text-servicos4 ms-3 mt-4"></p>
+
+                      <ul class="text-servicos3 me-2 fs-5">
+                        <li>Avaliação de usabilidade de dispositivos médicos;</li>
+                        <li>Adequações de interfaces de software para otimização da usabilidade;</li>
+                        <li>Análise de conformidade em relação a padrões normativos;</li>
+                        <li>Mensuração de desempenho do usuário;</li>
+                        <li>Desenvolvimento e projeto de sistemas e de interfaces de interação a partir de avaliações de
+                          usabilidade;</li>
+                      </ul>
+                      <!-- <p class="justify-self-end back-services2 me-3 mb-2"><button class="btn-cardS">+ SAIBA MAIS -->
+                      <!-- </button> -->
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item-service">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button mb-2 collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  8.     Avaliações de Tecnologias em Saúde (ATS)
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body-service">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="assets/img/services/1b.gif" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong>LEGENDA: </strong>REDE NEURAL RECORRENTE (RNN) <br>RECORRENTE ASSDS DE
+                                BRASILIA </h5>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/img/services/1c.gif" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong>Legenda: </strong>Rede Neural </h5>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/img/services/Val.jpg" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong> </strong>SINTOMAS RECORRENTES </h5>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-8 back-services">
+                      <p class="text-servicos4 ms-3 mt-4"></p>
+
+                      <ul class="text-servicos3 me-2 fs-5">
+                        <li>Serviços de diagnóstico situacional para a tomada de decisão e geração de economia;</li>
+                        <li>Capacitação e formação de gestores e profissionais de saúde;</li>
+                        <li>Desenvolvimento de estudos de monitoramento de horizonte tecnológico;</li>
+                        <li>Implantação de processos de ATS;</li>
+                        <li>Desenvolvimento de metodologias para racionalizar a utilização de tecnologias.</li>
+                      </ul>
+                      <!-- <p class="justify-self-end back-services2 me-3 mb-2"><button class="btn-cardS">+ SAIBA MAIS -->
+                      </button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item-service">
+              <h2 class="accordion-header" id="flush-headingNine">
+                <button class="accordion-button mb-2 collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                  9.     Usinagem
+                </button>
+              </h2>
+              <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body-service">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="assets/img/services/1b.gif" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong>LEGENDA: </strong>REDE NEURAL RECORRENTE (RNN) <br>RECORRENTE ASSDS DE
+                                BRASILIA </h5>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/img/services/1c.gif" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong>Legenda: </strong>Rede Neural </h5>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/img/services/Val.jpg" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong> </strong>SINTOMAS RECORRENTES </h5>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-8 back-services">
+                      <p class="text-servicos4 ms-3 mt-4"></p>
+
+                      <ul class="text-servicos3 me-2 fs-5">
+                        <li>Desenvolvimento e fabricação de moldes metálicos para injeção plástica;</li>
+                        <li>Desenvolvimento e fabricação de gabaritos de montagem e orientações;</li>
+                        <li>Usinagem CNC de materiais poliméricos e metálicos;</li>
+                        <li>Usinagem CNC de eixos, chapas e blocos metálicos;</li>
+                        <li>Usinagem CNC de ferramentas metal mecânica.</li>
+                      </ul>
+                      <!-- <p class="justify-self-end back-services2 me-3 mb-2"><button class="btn-cardS">+ SAIBA MAIS -->
+                      <!-- </button> -->
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item-service">
+              <h2 class="accordion-header" id="flush-headingTen">
+                <button class="accordion-button mb-2 collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                  10.    Consultoria (Mentoria)
+                </button>
+              </h2>
+              <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body-service">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="assets/img/services/1b.gif" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong>LEGENDA: </strong>REDE NEURAL RECORRENTE (RNN) <br>RECORRENTE ASSDS DE
+                                BRASILIA </h5>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/img/services/1c.gif" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong>Legenda: </strong>Rede Neural </h5>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/img/services/Val.jpg" class="d-block" alt="assets/img/services/1c.jpg">
+                            <div class="carousel-caption2 d-none d-md-block">
+                              <h5><strong> </strong>SINTOMAS RECORRENTES </h5>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-8 back-services">
+                      <p class="text-servicos4 ms-3 mt-4"></p>
+
+                      <ul class="text-servicos3 me-2 fs-5">
+                        <li>Mentoria para processos de certificação de sistemas da qualidade;</li>
+                        <li>Consultoria tecnológica relacionada as áreas de atuação do NUTES;</li>
+                        <li>Capacitação nas áreas de especialidade do NUTES;</li>
+                      </ul>
+                      <!-- <p class="justify-self-end back-services2 me-3 mb-2"><button class="btn-cardS">+ SAIBA MAIS -->
+                      <!-- </button> -->
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div> <!-- Espaço à direita -->
+      </div>
+    </section>
+
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container-footer">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <div class="row ">
+              <div class="col align-self-end footer-contacted">
+                <img id="logo-uepb" src="assets/img/social/uepb.png" class="" alt="">
+              </div>
+              <div class="col align-self-end">
+                <img id="logo-nutes" src="assets/img/social/nutes.png" class="" alt="">
+              </div>
+            </div>
+            <div class="col">
+              <p>Centro de referência para pesquisa, desenvolvimento, produção, inovação e prestação aplicada de
+                serviços
+                tecnológicos relacionados à saúde.</p>
+              <h4 id="footerh4">Conecte-se ao NUTES:</h4>
+              <div class="social-links">
+                <a href="https://www.instagram.com/nutesuepb/" target="_blank" class="instagram"><img class=""
+                    src="assets/img/social/instaBlack.png"></img></a>
+                <a href="https://pt-br.facebook.com/people/NUTES-UEPB/100063728133055/" target="_blank"
+                  class="facebook"><img class="" src="assets/img/social/facebookBlack.png"></img></a>
+                <a href="https://www.linkedin.com/in/nutes-uepb-457111150/" target="_blank" class=""><img class=""
+                    src="assets/img/social/linkedinBlack.png"></img></a>
+                <a href="https://twitter.com/nutesuepb" target="_blank" class="twitter"><img class=""
+                    src="assets/img/social/twitterBlack.png"></img></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>CONTATO</h4>
+            <ul>
+              <li>
+                <i class="bi bi-telephone-fill"></i>
+                <!-- <a href="tel:8333153336">(83) 3315-3336</a> -->
+                <a>(83) 3315-3336</a>
+              </li>
+              <li><i class="bi bi-envelope-fill"></i> <a href=mailto:nutes@setor.uepb.edu.br>nutes@setor.uepb.edu.br</a>
+              </li>
+              <li>
+                <i class="bi bi-mortarboard-fill"></i>
+                <a href="https://treinamentos.nutes.uepb.edu.br" target="_blank">treinamentos.nutes.uepb.edu.br</a>
+              </li>
+              <li><i class="bi bi-stopwatch-fill"></i> <a>Segunda a Sexta-feira
+                  08 às 17h </a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>PÁGINAS</h4>
+            <ul>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="index.html">HOME</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="sobre.html">SOBRE</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a
+                  href="instalacoes/instalacoes.html">INSTALAÇÕES</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a
+                  href="laboratorios/laboratorios.html">LABORATÓRIOS</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="servicos.html">SERVIÇOS</a></li>
+              <!-- <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="#">PRODUTOS</a></li> -->
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="embrapii.html">EMBRAPII</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="noticias.html">NOTÍCIAS</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="contato.html">CONTATO</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>VISITE-NOS</h4>
+            <div id="link-container">
+              <i id="link-icon" class="bi bi-geo-alt-fill"></i>
+              <a id="link-a" href="#">Rua Baraúnas, 351 Bairro Universitário
+                Campina Grande-PB CEP: 58429-500</a>
+
+            </div>
+            <div class="w-100">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.39184486773223!2d-35.915630262128!3d-7.21006368983313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ac1fd57d8c7c8d%3A0x94de9e94cb6a462f!2sN%C3%BAcleo%20de%20Tecnologias%20Estrat%C3%A9gicas%20em%20Sa%C3%BAde%20(NUTES)!5e0!3m2!1spt-BR!2sbr!4v1712237858888!5m2!1spt-BR!2sbr"
+                width="400" height="300" style="border:0;" allowfullscreen="" id="iframeMapa" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom clearfix">
+      <div class="footer-texts-container">
+        <p class="">Desenvolvido pelo <a href="#">NUTES</a></p>
+        <div class="">&copy; Copyright 2024 <strong><span>NUTES</span></strong>. All Rights Reserved</div>
+        <div class="">Revisão 00</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- End Footer -->
+
+  <!-- <div id="preloader">
+    <img src="/assets/img/preloader.gif" alt="Carregando...">
+  </div> -->
+  <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a> -->
+
+
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

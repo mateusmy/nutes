@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>NUTES</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <!-- <link href="assets/img/favicon.png" rel="icon"> -->
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Oculta todas as divs de conteúdo, exceto a primeira
+      var contentDivs = document.querySelectorAll('.collapseMat');
+      for (var i = 1; i < contentDivs.length; i++) {
+        contentDivs[i].style.display = 'none';
+      }
+
+      // Seleciona todos os botões
+      var buttons = document.querySelectorAll('.btn');
+      // Adiciona um ouvinte de eventos a cada botão
+      buttons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          console.log("Botão clicado:", this.id);
+          // Fecha todas as divs de conteúdo
+          contentDivs.forEach(function (div) {
+            div.style.display = 'none';
+          });
+          // Obtém o ID da div de conteúdo correspondente ao botão clicado
+          var targetId = this.getAttribute('id').replace('Btn', 'Collapse');
+          console.log("ID da div correspondente:", targetId);
+          var targetDiv = document.getElementById(targetId);
+          // Exibe a div de conteúdo correspondente ao botão clicado
+          if (targetDiv) {
+            targetDiv.style.display = 'block';
+            console.log("Div correspondente exibida.");
+          } else {
+            console.log("Nenhuma div correspondente encontrada.");
+          }
+        });
+      });
+    }); 
+  </script>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-menu">
+    <nav class="navbar ">
+      <div class="menu-itens">
+        <a href="index.html" class="logo"><img src="../assets/img/LOGO.svg" alt="" class="img-fluid"></a>
+        <ul class="menu">
+          <li><a class="nav-link" href="../index.html">HOME</a></li>
+          <li><a class="nav-link " href="../sobre.html">SOBRE</a></li>
+          <li><a class="nav-link" href="../instalacoes/instalacoes.html">INSTALAÇÕES</a></li>
+          <li><a class="nav-link active" href="../laboratorios/laboratorios.html">LABORATÓRIOS</a></li>
+          <li><a class="nav-link" href="../servicos.html">SERVIÇOS</a></li>
+          <li><a class="nav-link" href="embrapii.html">EMBRAPII</a></li>
+          <li><a class="nav-link" href="../noticias.html">NOTÍCIAS</a></li>
+          <li><a class="nav-link" href="../contato.html">CONTATO</a></li>
+        </ul>
+      </div>
+
+      <div class="social-icons">
+        <div id="navbar-search-autocomplete" style="display: none;" data-mdb-input-init>
+          <input type="search" id="form1" class="form-control-search me-2" oninput="search()" autocomplete="off" />
+          <ul id="searchResults" class="dropdown-menu mt-2" aria-labelledby="form1">
+          </ul>
+        </div>
+        <img class="lupa" id="img-lupa" onclick="toggleSearchIn()" src="../assets/img/social/lupa.png"
+          style="cursor: pointer;" />
+        <div class="dropdown" style="display: inline-block;">
+          <img class="brasil" src="../assets/img/social/brazil.svg" onclick="toggleDropdown()"
+            style="cursor: pointer;" />
+          <div id="languageDropdown" class="dropdown-content" style="display: none;">
+            <div class="row justify-content-center">
+              <div class="col-sm-3">
+                <a href="#" onclick="setLanguage('pt')">
+                  <img src="../assets/img/social/brazil.svg" />
+                </a>
+              </div>
+              <div class="col-sm-3">
+                <a href="#" onclick="setLanguage('es')">
+                  <img src="../assets/img/social/spain.svg" />
+                </a>
+              </div>
+              <div class="col-sm-3">
+                <a href="#" onclick="setLanguage('en')">
+                  <img src="../assets/img/social/usa.svg" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <img class="line" src="../assets/img/social/line.svg" style="cursor: pointer;" />
+        <img class="instagram" src="../assets/img/social/instagram.svg" style="cursor: pointer;" />
+        <img class="facebook" src="../assets/img/social/facebook.svg" style="cursor: pointer;" />
+        <img class="linkedin" src="../assets/img/social/linkedin.svg" style="cursor: pointer;" />
+        <img class="twitter" src="../assets/img/social/twitter.svg" style="cursor: pointer;" />
+      </div>
+    </nav>
+  </header>
+  <!-- End Header -->
+
+  <main id="main">
+
+    <div id="side-menu2Lab">
+      <ul>
+        <li><a href="#descricao">Descrição</a></li>
+        <li><a href="#linhas-de-atuacao">Áreas de Atuação</a></li>
+        <li><a href="#coordenacao">Coordenação</a></li>
+        <li><a href="#principais-servicos">Principais Serviços</a></li>
+        <li><a href="#projetos-associados">Projetos Associados</a></li>
+
+
+        <!-- <li><a href="#"><img src="/assets/img/social/arrowL2.png" alt="Seta" /> Voltar para Laboratórios</a></li> -->
+
+        <li><a href="javascript:void(0);" onclick="history.go(-1);"><img src="/assets/img/social/arrowL4.png" alt="Seta"
+              class="pb-1" /> Voltar para Laboratórios</a></li>
+
+
+
+      </ul>
+    </div>
+
+    <!-- ======= CTA2 Section ======= -->
+    <section id="cta2Lab" class="cta2">
+      <div class="row cta2-text-geral">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-8 cta2-position ">
+          <h3 class="fw-bold ">LCB</h3>
+          <div class="cta2-line"></div>
+          <p class="col">
+            Laboratório de Computação Biomédica
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End CTA2 Section -->
+
+
+    <section id="descricao" class="">
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-8 ">
+          <div class="card mt-5">
+            <h3 class=" card-header">
+              <strong class="card-Titulo ms-3">Descrição</strong>
+            </h3>
+            <div class="card-body">
+              <!-- <h5 class="card-title">Special title treatment</h5> -->
+              <p class="card-text card-text mb-1">
+                O Laboratório de Computação Biomédica (LCB) atua em projetos de desenvolvimento de software utilizando
+                tecnologias como Inteligência Artificial, Internet das Coisas, Realidade Virtual, plataformas WEB e
+                Mobile, entre outras. Atualmente, o laboratório mantém parcerias com a Secretaria da Fazenda (SEFAZ-PB),
+                a Fundação de Apoio à Pesquisa (FAPESQ-PB), a ONG Mulheres de Peito, a Secretaria de Desenvolvimento
+                Humano (SEDH) e a Secretaria de Saúde do Estado da Paraíba. <br> <br>
+                Além disso, o LCB oferece suporte tecnológico para projetos financiados em colaboração com outros
+                laboratórios, como Siemens, Light e Secretaria de Saúde (SES-PB). A diversidade de suas colaborações se
+                estende a empresas, universidades e institutos de pesquisa, promovendo prospecções e trabalhos conjuntos
+                em busca de oportunidades inovadoras.<br> <br>
+                O LCB coordena o comitê de saúde da Associação Brasileira de Internet das Coisas (ABINC), fundou uma
+                startup chamada Sênior Saúde Móvel e ostenta cinco registros de software, uma patente, além de inúmeros
+                artigos publicados em revistas, livros e anais de eventos. Reconhecido nacionalmente como a maior base
+                de dados do Brasil sobre idosos monitorados, o laboratório possui informações de idosos de todo o Brasil
+                e da Holanda.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="linhas-de-atuacao" class="">
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-8 ">
+          <div class="card mt-5">
+            <h3 class=" card-header">
+              <strong class="card-Titulo ms-3">Áreas de Atuação</strong>
+            </h3>
+            <div class="card-body">
+              <ul class="card-text card-text mb-1">
+                <li>
+                  Engenharia de Software
+                </li>
+                <li>
+                  Usabilidade e Fatores Humanos
+                </li>
+                <li>
+                  Equipamentos Eletromédicos
+                </li>
+                <li>
+                  Serviços Tecnológicos
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="coordenacao" class="">
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-8">
+          <div class="card mt-5">
+            <h3 class=" card-header ">
+              <strong class="card-Titulo ms-3">Coordenação</strong>
+            </h3>
+            <div class="card-body">
+              <!-- <h5 class="card-title">Special title treatment</h5> -->
+              <p class="card-text card-text mb-1">
+                <strong>Prof. Dr. Paulo Barbosa</strong><br>
+                Cientista da Computação<br>
+                <a target="_blank" href="http://lattes.cnpq.br/9229454955533353">Lattes</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section id="principais-servicos" class="">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-8 mb-4 mt-4">
+
+          <div class="row card-tamanho mt-4 mb-4">
+            <h3 class="mt-2 espacamento-servicos">
+              <strong class="span2S">Principais Serviços</strong>
+            </h3>
+            <div class="col-md-2">
+              <button id="dispositivosBtn" class="btn btn-color active" type="button" aria-expanded="false">
+                <img class="imagem-Card mt-4" src="/assets/img/services/main/2.png"
+                  alt="Manufatura Aditiva e Subtrativa">
+                <p class="desc-areas">Plataforma <br> WEB e Mobile</p>
+              </button>
+            </div>
+            <div class="col-md-2 ">
+              <button id="tecnologiasBtn" class="btn btn-color " type="button" aria-expanded="true">
+                <img class="imagem-Card mt-4" src="/assets/img/services/main/1.png" alt="Plataforma WEB e MOBILE">
+                <p class="desc-areas">Inteligência Artificial</p>
+              </button>
+            </div>
+
+            <div class="col-md-2">
+              <button id="usabilidadeBtn" class="btn btn-color" type="button" aria-expanded="false">
+                <img class="imagem-Card mt-4" src="/assets/img/services/main/3.png" alt="Software as Medical Device">
+                <p class="desc-areas">Software as Medical Device</p>
+              </button>
+            </div>
+            <div class="col-md-2">
+              <button id="engenhariaBtn" class="btn btn-color" type="button" aria-expanded="false">
+                <img class="imagem-Card mt-4" src="/assets/img/services/main/4.png" alt="Sistemas de Gestão">
+                <p class="desc-areas">Internet das Coisas (IoT)</p>
+              </button>
+            </div>
+            <div class="col-md-2">
+              <button id="consultoriaBtn" class="btn btn-color" type="button" aria-expanded="false">
+                <img class="imagem-Card mt-4" src="/assets/img/services/main/5.png"
+                  alt="Desenvolvimento de Órteses e Próteses">
+                <p class="desc-areas">Realidade <br> Virtual</p>
+              </button>
+            </div>
+          </div>
+
+          <!-- Conteúdo específico para Dispositivos Médicos -->
+          <div class="collapseMat show " id="dispositivosCollapse">
+            <div class="p-5 card-body card-azul ms-5  card-azul-tamanho">
+              <!-- Conteúdo específico para Dispositivos Médicos -->
+              <p class="mb-3"> <strong>Desenvolvimento de Front-end e Back-end para interfaces WEB e mobile</strong>
+              </p>
+              <p> Criação de interfaces WEB e Mobile, englobando o desenvolvimento tanto do Front-end, com foco na
+                experiência do usuário, quanto do Back-end, garantindo funcionalidade e integração eficaz dos sistemas.
+              </p>
+            </div>
+          </div>
+          <!-- Conteúdo específico para Tecnologias Tridimensionais -->
+          <div class="collapseMat  show" id="tecnologiasCollapse">
+            <div class="p-5 card-body card-azul ms-5  card-azul-tamanho">
+              <!-- Conteúdo específico para Tecnologias Tridimensionais -->
+              <p class="mb-3"> <strong>Desenvolvimento de soluções em Inteligência Artificial
+                  na área da saúde</strong>
+              </p>
+              <p>
+                Expertise na criação e implementação de soluções avançadas de Inteligência Artificial, direcionadas à
+                área da saúde, que permitam diagnósticos precisos e avanços significativos em análises clínicas.
+              </p>
+            </div>
+          </div>
+
+
+
+          <!-- Conteúdo específico para Usabilidade de Fatores Humanos -->
+          <div class="collapseMat  " id="usabilidadeCollapse">
+            <div class="p-5 card-body card-azul ms-5  card-azul-tamanho">
+              <!-- Conteúdo específico para Usabilidade de Fatores Humanos -->
+              <p class="mb-3"><strong>Software as Medical Device (SaMD)</strong>
+              </p>
+              <p> Foco no desenvolvimento de Softwares como Dispositivos Médicos (SaMD), desde a concepção até a
+                implementação, assegurando conformidade com regulamentações e promovendo avanços tecnológicos no cenário
+                médico.
+              </p>
+            </div>
+          </div>
+
+          <!-- Conteúdo específico para Engenharia de Software -->
+          <div class="collapseMat" id="engenhariaCollapse">
+            <div class="p-5 card-body card-azul ms-5  card-azul-tamanho">
+              <!-- Conteúdo específico para Engenharia de Software -->
+              <p class="mb-3"> <strong>Internet das Coisas (IoT) com foco em Wearables Devices</strong> </p>
+              <p> Desenvolvimento de soluções envolvendo Internet das Coisas (IoT) aplicadas a Dispositivos Médicos,
+                assegurando usabilidade, precisão e
+                eficácia. Essa integração permite a coleta e análise de dados em tempo real.
+
+
+              </p>
+            </div>
+          </div>
+
+          <!-- Conteúdo específico para Consultoria e Avaliação Tech. -->
+          <div class="collapseMat  " id="consultoriaCollapse">
+            <div class="p-5 card-body card-azul ms-5  card-azul-tamanho">
+              <!-- Conteúdo específico para Consultoria e Avaliação Tech. -->
+              <p class="mb-3"> <strong> Desenvolvimento de soluções por meio de Realidade Virtual</strong>
+              </p>
+              <p> Desenvolvimento de aplicações utilizando Realidade Virtual, abrangendo desde o projeto
+                até a implementação final, utilizando ferramentas de alta qualidade e garantindo a entrega de
+                soluções imersivas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projetos-associados" class="">
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-8">
+          <h3 class="mb-4">
+            <strong class="span9S">Nossa Equipe</strong>
+          </h3>
+          <p class="span7S">
+          </p>
+        </div>
+        <div class="col-sm-4 proj-associados"></div>
+        <div class="col-sm-8 proj-associados">
+          <h3 class="mt-5 mb-5">
+            <strong class="mt-5 ">Projetos Associados</strong>
+          </h3>
+          <div class="accordion mb-5 accordion-flush accordionEquipe" id="accordionFlushsisgh">
+
+            <div class="accordion-item mb-4 show">
+              <h2 class="accordion-header" id="flush-headingOneSisgh">
+                <button class="accordion-button font-accordion" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOneSisgh" aria-expanded="false" aria-controls="flush-collapseOneSisgh">
+                  OCARIoT
+                </button>
+              </h2>
+              <div id="flush-collapseOneSisgh" class="accordion-collapse collapse show"
+                aria-labelledby="flush-headingOneSisgh" data-bs-parent="#accordionFlushsisgh">
+                <div class="accordion-body">
+                  <div class="certi">
+
+                    <div class="row centralizar">
+                      <p class="mb-5 ms-4 width-labs">
+                        Plataforma Inteligente de Prevenção de Obesidade Infantil, realizado em parceria com
+                        instituições do Brasil e da Europa, com piloto em ambos os continentes.
+                      </p>
+                      <div id="carouselExampleSisgh" class="carousel slide justify-content-center"
+                        data-bs-ride="carousel">
+
+                        <div class="carousel-inner ">
+                          <div class="carousel-item active">
+                            <img src="../assets/img/services/1b.gif" class="d-block"
+                              alt="../assets/img/services/1c.jpg">
+                            <div class="carousel-caption-Sisgh d-none d-md-block">
+                              <h5 class="mt-1">REDE NEURAL RECORRENTE (RNN) </h5>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../assets/img/services/1c.gif" class="d-block"
+                              alt="../assets/img/services/1c.jpg">
+                            <div class="carousel-caption-Sisgh d-none d-md-block">
+                              <h5 class="mt-1">REDE NEURAL RECORRENTE (RNN) </h5>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSisgh"
+                          data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSisgh"
+                          data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mb-4">
+              <h2 class="accordion-header" id="flush-headingOneSisghTwo">
+                <button class="accordion-button font-accordion collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOneSisghTwo" aria-expanded="false"
+                  aria-controls="flush-collapseOneSisghTwo">
+                  Sênior Saúde Móvel
+                </button>
+              </h2>
+              <div id="flush-collapseOneSisghTwo" class="accordion-collapse collapse"
+                aria-labelledby="flush-headingOneSisghTwo" data-bs-parent="#accordionFlushsisgh">
+                <div class="accordion-body">
+                  <div class="certi">
+                    <div class="row centralizar">
+                      <p class="mb-5 ms-4 width-labs">
+                        Plataforma Inteligente de Monitoramento de Idosos, que integra sensores de dispositivos
+                        vestíveis e óculos de realidade virtual para a prevenção de síndromes geriátricas. Possui
+                        clientes no Brasil e na Europa, com foco no monitoramento da população idosa e da saúde do
+                        trabalhador.
+
+                      </p>
+                      <div id="carouselExampleSisgh" class="carousel slide justify-content-center"
+                        data-bs-ride="carousel">
+
+                        <div class="carousel-inner ">
+                          <div class="carousel-item active">
+                            <img src="../assets/img/services/1b.gif" class="d-block"
+                              alt="../assets/img/services/1c.jpg">
+                            <div class="carousel-caption-Sisgh d-none d-md-block">
+                              <h5 class="mt-1">REDE NEURAL RECORRENTE (RNN) </h5>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../assets/img/services/1c.gif" class="d-block"
+                              alt="../assets/img/services/1c.jpg">
+                            <div class="carousel-caption-Sisgh d-none d-md-block">
+                              <h5 class="mt-1">REDE NEURAL RECORRENTE (RNN) </h5>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSisgh"
+                          data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSisgh"
+                          data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mb-4">
+              <h2 class="accordion-header" id="flush-headingOneSisghThree">
+                <button class="accordion-button font-accordion collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOneSisghThree" aria-expanded="false"
+                  aria-controls="flush-collapseOneSisghThree">
+                  Plataforma Mulheres de Peito
+                </button>
+              </h2>
+              <div id="flush-collapseOneSisghThree" class="accordion-collapse collapse"
+                aria-labelledby="flush-headingOneSisghThree" data-bs-parent="#accordionFlushsisgh">
+                <div class="accordion-body">
+                  <div class="certi">
+                    <div class="row centralizar">
+                      <p class="mb-5 ms-4 width-labs">
+                        Sistema desenvolvido para rastreio e acompanhamento da jornada de mulheres com câncer de mama no
+                        estado da Paraíba. A plataforma realiza a captação de mulheres com riscos de câncer de mama e as
+                        encaminha para o SUS.
+                      </p>
+                      <div id="carouselExampleSisgh" class="carousel slide justify-content-center"
+                        data-bs-ride="carousel">
+
+                        <div class="carousel-inner ">
+                          <div class="carousel-item active">
+                            <img src="../assets/img/services/1b.gif" class="d-block"
+                              alt="../assets/img/services/1c.jpg">
+                            <div class="carousel-caption-Sisgh d-none d-md-block">
+                              <h5 class="mt-1">REDE NEURAL RECORRENTE (RNN) </h5>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../assets/img/services/1c.gif" class="d-block"
+                              alt="../assets/img/services/1c.jpg">
+                            <div class="carousel-caption-Sisgh d-none d-md-block">
+                              <h5 class="mt-1">REDE NEURAL RECORRENTE (RNN) </h5>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSisgh"
+                          data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSisgh"
+                          data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container-footer">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <div class="row ">
+              <div class="col align-self-end footer-contacted">
+                <img id="logo-uepb" src="../assets/img/social/uepb.png" class="" alt="">
+              </div>
+              <div class="col align-self-end">
+                <img id="logo-nutes" src="../assets/img/social/nutes.png" class="" alt="">
+              </div>
+            </div>
+            <div class="col">
+              <p>Centro de referência para pesquisa, desenvolvimento, produção, inovação e prestação aplicada de
+                serviços
+                tecnológicos relacionados à saúde.</p>
+              <h4 id="footerh4">Conecte-se ao NUTES:</h4>
+              <div class="social-links">
+                <a href="https://www.instagram.com/nutesuepb/" target="_blank" class="instagram"><img class=""
+                    src="../assets/img/social/instaBlack.png"></img></a>
+                <a href="https://pt-br.facebook.com/people/NUTES-UEPB/100063728133055/" target="_blank"
+                  class="facebook"><img class="" src="../assets/img/social/facebookBlack.png"></img></a>
+                <a href="https://www.linkedin.com/in/nutes-uepb-457111150/" target="_blank" class=""><img class=""
+                    src="../assets/img/social/linkedinBlack.png"></img></a>
+                <a href="https://twitter.com/nutesuepb" target="_blank" class="twitter"><img class=""
+                    src="../assets/img/social/twitterBlack.png"></img></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>CONTATO</h4>
+            <ul>
+              <li>
+                <i class="bi bi-telephone-fill"></i>
+                <!-- <a href="tel:8333153336">(83) 3315-3336</a> -->
+                <a>(83) 3315-3336</a>
+              </li>
+              <li><i class="bi bi-envelope-fill"></i> <a href=mailto:nutes@setor.uepb.edu.br>nutes@setor.uepb.edu.br</a>
+              </li>
+              <li>
+                <i class="bi bi-mortarboard-fill"></i>
+                <a href="https://treinamentos.nutes.uepb.edu.br" target="_blank">treinamentos.nutes.uepb.edu.br</a>
+              </li>
+              <li><i class="bi bi-stopwatch-fill"></i> <a>Segunda a Sexta-feira
+                  08 às 17h </a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>PÁGINAS</h4>
+            <ul>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="../index.html">HOME</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="../sobre.html">SOBRE</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a
+                  href="../instalacoes/instalacoes.html">INSTALAÇÕES</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a
+                  href="../laboratorios/laboratorios.html">LABORATÓRIOS</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="../servicos.html">SERVIÇOS</a></li>
+              <!-- <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="../#">PRODUTOS</a></li> -->
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="../embrapii.html">EMBRAPII</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="../noticias.html">NOTÍCIAS</a></li>
+              <li id="footer-li"><i class="bx bx-chevron-right"></i> <a href="../contato.html">CONTATO</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>VISITE-NOS</h4>
+            <div id="link-container">
+              <i id="link-icon" class="bi bi-geo-alt-fill"></i>
+              <a id="link-a" href="#">Rua Baraúnas, 351 Bairro Universitário
+                Campina Grande-PB CEP: 58429-500</a>
+
+            </div>
+            <div class="w-100">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.39184486773223!2d-35.915630262128!3d-7.21006368983313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ac1fd57d8c7c8d%3A0x94de9e94cb6a462f!2sN%C3%BAcleo%20de%20Tecnologias%20Estrat%C3%A9gicas%20em%20Sa%C3%BAde%20(NUTES)!5e0!3m2!1spt-BR!2sbr!4v1712237858888!5m2!1spt-BR!2sbr"
+                width="400" height="300" style="border:0;" allowfullscreen="" id="iframeMapa" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom clearfix">
+      <div class="footer-texts-container">
+        <p class="">Desenvolvido pelo <a href="#">NUTES</a></p>
+        <div class="">&copy; Copyright 2024 <strong><span>NUTES</span></strong>. All Rights Reserved</div>
+        <div class="">Revisão 00</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- End Footer --> 
+
+  <div id="preloader"></div>
+  <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a> -->
+
+
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
